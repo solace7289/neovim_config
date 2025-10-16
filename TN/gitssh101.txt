@@ -20,9 +20,22 @@ copy link SSH của repo github. Sau đó trên máy, kiểm tra và setup lại
     - bằng cách là dùng: git config --global user.name "solace7289" 
     - và email: git config --global user.email "solace7289@gmail.com"
 
+------------------------------------------------------------------------
+Khi bạn chạy:
+
+ssh -T git@github.com
 
 
+SSH thấy bạn chưa từng kết nối tới github.com trước đây, nên nó hỏi:
 
+“Bạn có chắc là đang nói chuyện với đúng GitHub không?”
+Nếu đồng ý, tôi sẽ ghi nhớ fingerprint của GitHub vào danh sách máy tin cậy của bạn.
+
+Thông báo gốc:
+
+The authenticity of host 'github.com (20.205.243.166)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+--> gõ 'yes' để tiếp tục
 
 
 
