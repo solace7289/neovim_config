@@ -1,0 +1,30 @@
+
+Check xem máy đã có ssh và git chưa: 
+- check git: git --version
+- check ssh: ssh -V
+
+Đầu tiên là tạo ssh key trên máy laptop muốn push code k cần đăng nhập.
+- bằng lệnh là: ssh-keygen -t ed25519 "solace7289@gmail.com"
+- kết quả sẽ tạo ra hai file là: id_ed25519 và id_ed25519.pub -> trong đó file .pub sẽ chứa public key
+
+Tiếp đó là add ssh key.
+- Mở và dùng git bash, vì cmd hay shell đôi khi lỗi. Chạy lệnh: eval "$(ssh-agent -s)"
+- và sau đó nạp key: ssh-add ~/.ssh/id_ed25519 
+
+Trên github, đăng nhập vào tài khoản github cần push, sau tạo ssh key, paste public key vào đó.
+
+copy link SSH của repo github. Sau đó trên máy, kiểm tra và setup lại url:
+- kiểm tra remote xem đã thay bằng SSH chưa bằng lệnh: git remote -v
+- Nếu chưa chỉnh lại sang SSH thì chỉnh lại bằng lệnh: git remote set-url origin git@github.com:solace7289/neovim_config.git
+- sau đó check lại xem đã add được remote mới hay chưa. Kế tiếp là phải set cả user.name và user.email trên config git để có thể commit code.
+    - bằng cách là dùng: git config --global user.name "solace7289" 
+    - và email: git config --global user.email "solace7289@gmail.com"
+
+
+
+
+
+
+
+
+
