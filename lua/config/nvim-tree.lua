@@ -8,7 +8,7 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", { noremap = tru
 require("nvim-tree").setup({
     view = {
         side = "right",
-        width = 35,
+        width = 25,
     },
 })
 
