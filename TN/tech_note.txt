@@ -1,0 +1,21 @@
+
+Mở Network Connections: Window + R -> ncpa.cpl
+
+Dùng để thêm vào PATH vĩnh viễn (ghi vào Registry)
+setx PATH "%PATH%;C:\MyTools"
+
+
+🔹 Giải thích:
+
+setx là lệnh của Windows để ghi biến môi trường vào hệ thống hoặc user environment.
+
+Sau khi chạy, giá trị được lưu vĩnh viễn, dùng cho các cửa sổ CMD mở sau.
+
+
+
+
+
+
+
+
+

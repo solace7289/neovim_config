@@ -1,0 +1,53 @@
+Xem CPU (tên, số nhân, xung):
+
+wmic cpu get name,NumberOfCores,NumberOfLogicalProcessors,MaxClockSpeed,CurrentClockSpeed
+# hoặc PowerShell:
+Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors,MaxClockSpeed,CurrentClockSpeed
+
+
+Xem GPU (card đồ họa):
+
+wmic path win32_VideoController get name,adapterram,driver_version
+# hoặc PowerShell:
+Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion,AdapterRAM
+
+
+Xem tất cả adapter mạng:
+
+Get-CimInstance Win32_NetworkAdapter | Select-Object Name,NetEnabled,MACAddress
+
+
+Thông tin tổng quan hệ thống (có CPU):
+
+systeminfo | findstr /C:"Processor"
+
+=====================================================================================
+Mở DirectX Diagnostic (giao diện đồ họa — GPU + âm thanh + thông tin hệ thống):
+
+dxdiag
+
+
+(Device Manager):
+
+devmgmt.msc
+
+=====================================================================================
+(hoặc dùng PowerShell để xem driver):
+
+Get-PnpDevice -Class Display
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

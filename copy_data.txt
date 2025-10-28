@@ -1,0 +1,82 @@
+
+Mở Internet Connections (Network Connections)
+
+    ncpa.cpl
+
+Check IP:
+    ipconfig
+
+Bật sharing:
+    Control Panel → Network and Sharing Center → Advanced sharing settings.
+
+    Bật:
+
+✅      “Turn on network discovery”
+
+✅      “Turn on file and printer sharing”
+
+✅      Turn off password protected sharing
+
+==================================================================================
+
+Set IP tĩnh:
+
+Máy 1: 192.168.10.1
+
+Máy 2: 192.168.10.2
+
+Subnet mask: 255.255.255.0
+
+Gateway và DNS: để trống
+hoặc: 
+    -> set máy 1 thành máy 2 và ngược lại
+
+
+==================================================================================
+Lệnh robocopy:
+
+    robocopy \\192.168.10.1\Edrive E:\Backup /E /Z /MT:16 /R:3 /W:5 /LOG:C:\copyE.log
+
+=> trong đó thì:
+
+\\192.168.10.1\Edrive -> thư mục nguồn
+E:\Backup -> thư mục đích
+
+/E → copy all (even empty folder) 
+
+/Z → resume khi connect fail
+
+/MT:16 → đa luồng, có thể chỉnh lên 32 hoặc 64
+
+/LOG: → ghi log 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
